@@ -41,7 +41,30 @@ const outputOil = oilPrice(30, 20, 10);
 console.log(outputOil)
 
 
-// Problem [#5 isBestFriend.].
-const isBestFriend = () => {
+// Problem [#4 Travellr.].
+const busSit = 50;
+const microSit = 11;
+const personBusTicket = 250;
 
+const publicBusFare = (peoples) => {
+    const busQuantity = parseInt(peoples % busSit);
+    const carQuantity = busQuantity % microSit;
+    const person = carQuantity * personBusTicket;
+    return person;
 }
+const totalperson = publicBusFare(67);
+console.log(totalperson);
+
+
+// Problem [#5 isBestFriend.].
+const best = { name: "sujon", friend: "sheikh" }
+const bondu = { name: "sheikh", friend: "sujon" }
+const isBestFriend = (dost, dostoo) => {
+    if (dost == best.name || dost == best.friend && dostoo == bondu.name || dostoo == bondu.friend) {
+        return true;
+    } else {
+        return false
+    }
+}
+const myBestfriend = isBestFriend("sujonx", "sheikh");
+console.log(myBestfriend);
